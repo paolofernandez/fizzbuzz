@@ -5,7 +5,15 @@ public class FizzBuzz {
 	public String imprimir(int num)
 	{
 		String mensaje = "";
-		mensaje += num;
+		if (!(num%3==0) && !(num%5==0))
+			mensaje += num;
+		else
+		{
+			if (num%3==0)
+				mensaje += "fizz";
+			else //if (num%5==0)
+				mensaje += "buzz";
+		}
 		return mensaje;
 	}
 }

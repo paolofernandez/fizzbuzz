@@ -16,4 +16,14 @@ public class FizzBuzzTest {
 	public void imprimeFizzEnMultiplosDe3() {
 		assertEquals(fb.imprimir(3),"fizz");
 	}
+	
+	@Test
+	public void imprimeBuzzEnMultiplosDe5() {
+		assertEquals(fb.imprimir(5),"buzz");
+	}
+	
+	@Test
+	public void imprimeFizzBuzzEnMultiplosDe3y5() {
+		assertEquals(fb.imprimir(15),"fizzbuzz");
+	}
 }
