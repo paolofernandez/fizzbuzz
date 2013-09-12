@@ -11,7 +11,7 @@ public class FizzBuzz {
 		{
 			if (num%3==0)
 				mensaje += "fizz";
-			else //if (num%5==0)
+			if (num%5==0)
 				mensaje += "buzz";
 		}
 		return mensaje;
