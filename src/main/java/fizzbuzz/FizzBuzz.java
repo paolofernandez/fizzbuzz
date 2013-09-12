@@ -1,16 +1,11 @@
 package fizzbuzz;
 
 public class FizzBuzz {
-	private int cont = 0;
-	public int posision()
-	{
-		return cont;
-	}
-	public String imprimir()
+
+	public String imprimir(int num)
 	{
 		String mensaje = "";
-		mensaje += cont;
-		cont++;
+		mensaje += num;
 		return mensaje;
 	}
 }
