@@ -1,5 +1,4 @@
 package fizzbuzz;
-import java.lang.*;
 
 public class FizzBuzz {
 	private int cont = 0;
@@ -11,6 +10,7 @@ public class FizzBuzz {
 	{
 		String mensaje = "";
 		mensaje += cont;
+		cont++;
 		return mensaje;
 	}
 }
