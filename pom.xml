@@ -4,4 +4,16 @@
   <artifactId>fizzbuzz</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>fizzbuzz</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.carrotsearch.randomizedtesting</groupId>
+  		<artifactId>junit4-maven-plugin</artifactId>
+  		<version>2.0.10</version>
+  		<type>maven-plugin</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.4</version> </dependency>
+  </dependencies>
 </project>
