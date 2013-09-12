@@ -16,4 +16,15 @@ public class FizzBuzz {
 		}
 		return mensaje;
 	}
+	
+	public String imprimirSerie(int limite)
+	{
+		String serie="";
+		for(int i=1;i<limite;i++)
+		{
+			serie+=imprimir(i)+" ";
+		}
+		serie+=imprimir(limite);
+		return serie;
+	}
 }

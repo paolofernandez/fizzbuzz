@@ -8,7 +8,7 @@ public class FizzBuzzTest {
 	FizzBuzz fb = new FizzBuzz();
 	
 	@Test
-	public void imprimeNumero() {
+	public void imprimeUnNumero() {
 		assertEquals(fb.imprimir(1),"1");
 	}
 	
@@ -25,5 +25,10 @@ public class FizzBuzzTest {
 	@Test
 	public void imprimeFizzBuzzEnMultiplosDe3y5() {
 		assertEquals(fb.imprimir(15),"fizzbuzz");
+	}
+	
+	@Test
+	public void imprimeUnaSerie() {
+		assertEquals(fb.imprimirSerie(16),"1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16");
 	}
 }
