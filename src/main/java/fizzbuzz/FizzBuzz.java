@@ -2,20 +2,31 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
+	public String imprimirFizz(int num)
+	{
+		String mensaje="";
+		if (num%3==0)
+			mensaje += "fizz";
+		return mensaje;
+	}
+	
+	public String imprimirBuzz(int num)
+	{
+		String mensaje="";
+		if (num%5==0)
+			mensaje += "buzz";
+		return mensaje;
+	}
+	
 	public String imprimir(int num)
 	{
 		String mensaje = "";
 		if (num>0)
 		{
-			if (!(num%3==0) && !(num%5==0))
+			mensaje+=imprimirFizz(num);
+			mensaje+=imprimirBuzz(num);
+			if (mensaje.isEmpty())
 				mensaje += num;
-			else
-			{
-				if (num%3==0)
-					mensaje += "fizz";
-				if (num%5==0)
-					mensaje += "buzz";
-			}
 		}
 		return mensaje;
 	}
