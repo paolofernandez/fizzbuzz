@@ -8,18 +8,12 @@ public class FizzBuzzTest {
 	FizzBuzz fb = new FizzBuzz();
 	
 	@Test
-	public void contadorEnCeroAlInicio() {
-		assertEquals(fb.posision(),0);
-	}
-	
-	@Test
 	public void imprimeNumero() {
-		assertEquals(fb.imprimir(),"0");
+		assertEquals(fb.imprimir(1),"1");
 	}
 	
 	@Test
-	public void pasaAlSiguienteNumeroDespuesDeImprimir() {
-		fb.imprimir();
-		assertEquals(fb.posision(),1);
+	public void imprimeFizzEnMultiplosDe3() {
+		assertEquals(fb.imprimir(3),"fizz");
 	}
 }
