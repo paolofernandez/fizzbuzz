@@ -8,6 +8,11 @@ public class FizzBuzzTest {
 	FizzBuzz fb = new FizzBuzz();
 	
 	@Test
+	public void noImprimeNadaParaCero() {
+		assertEquals(fb.imprimir(0),"");
+	}
+	
+	@Test
 	public void imprimeUnNumero() {
 		assertEquals(fb.imprimir(1),"1");
 	}
