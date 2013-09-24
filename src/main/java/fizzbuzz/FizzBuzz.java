@@ -36,7 +36,7 @@ public class FizzBuzz {
 		String serie="";
 		for(int i=1;i<limite;i++)
 		{
-			serie+=imprimir(i)+" ";
+			serie+=imprimir(i)+"/n ";
 		}
 		serie+=imprimir(limite);
 		return serie;
