@@ -1,43 +1,30 @@
 public class FizzBuzz {
 
-	public String imprimirFizz(int num)
-	{
-		String mensaje="";
-		if (num%3==0)
-			mensaje += "fizz";
-		return mensaje;
+	private static final int _FIZZ = 3;
+	private static final int _BUZZ = 5;
+	private static final String _MENSAJE_BUZZ = "Buzz";
+	private static final String _MENSAJE_FIZZ = "Fizz";
+	private static final String _MENSAJE_FIZZ_BUZZ = "FizzBuzz";
+
+	public String generar(int numero) {
+		if (esMultiploDe(numero, _FIZZ) && esMultiploDe(numero, _BUZZ))
+			return _MENSAJE_FIZZ_BUZZ;
+		if (esMultiploDe(numero, _FIZZ))
+			return _MENSAJE_FIZZ;
+		if (esMultiploDe(numero, _BUZZ))
+			return _MENSAJE_BUZZ;
+		return Integer.toString(numero);
 	}
-	
-	public String imprimirBuzz(int num)
-	{
-		String mensaje="";
-		if (num%5==0)
-			mensaje += "buzz";
-		return mensaje;
+
+	private boolean esMultiploDe(int numero, int multiplo) {
+		return numero % multiplo == 0;
 	}
-	
-	public String imprimir(int num)
-	{
-		String mensaje = "";
-		if (num>0)
-		{
-			mensaje+=imprimirFizz(num);
-			mensaje+=imprimirBuzz(num);
-			if (mensaje.isEmpty())
-				mensaje += num;
-		}
-		return mensaje;
-	}
-	
-	public String imprimirSerie(int limite)
-	{
-		String serie="";
-		for(int i=1;i<limite;i++)
-		{
-			serie+=imprimir(i)+"/n ";
-		}
-		serie+=imprimir(limite);
-		return serie;
+
+	public String imprimir(int maximo) {
+		String resultado = "";
+		for (int i = 1; i <= maximo; i++)
+			resultado = resultado + generar(i) + "\n";
+		return resultado;
 	}
 
 }

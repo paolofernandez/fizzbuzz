@@ -4,36 +4,61 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class FizzBuzzTest {
-	private FizzBuzz fb = new FizzBuzz();
-	
-	@Test
-	public void noImprimeNadaParaCero() {
-		assertEquals(fb.imprimir(0),"");
+	private FizzBuzz fb;
+
+	@Before
+	public void setup() {
+		fb = new FizzBuzz();
 	}
-	
+
 	@Test
-	public void imprimeUnNumero() {
-		assertEquals(fb.imprimir(1),"1");
+	public void generaFizzSiNumeroEs3() {
+		assertEquals("Fizz", fb.generar(3));
 	}
-	
+
 	@Test
-	public void imprimeFizzEnMultiplosDe3() {
-		assertEquals(fb.imprimir(3),"fizz");
+	public void generaElMismoNumeroSiNoEs3() {
+		assertEquals("4", fb.generar(4));
 	}
-	
+
 	@Test
-	public void imprimeBuzzEnMultiplosDe5() {
-		assertEquals(fb.imprimir(5),"buzz");
+	public void generaFizzSiEsMultiploDe3() {
+		assertEquals("Fizz", fb.generar(6));
 	}
-	
+
 	@Test
-	public void imprimeFizzBuzzEnMultiplosDe3y5() {
-		assertEquals(fb.imprimir(15),"fizzbuzz");
+	public void generaBuzzSiNumero5() {
+		assertEquals("Buzz", fb.generar(5));
 	}
-	
+
 	@Test
-	public void imprimeUnaSerie() {
-		assertEquals(fb.imprimirSerie(16),"1/n 2/n fizz/n 4/n buzz/n fizz/n 7/n 8/n fizz/n buzz/n 11/n fizz/n 13/n 14/n fizzbuzz/n 16");
+	public void generaBuzzSiEsMultiplo5() {
+		assertEquals("Buzz", fb.generar(10));
+	}
+
+	@Test
+	public void generaFizzBuzzPara15() {
+		assertEquals("FizzBuzz", fb.generar(15));
+	}
+
+	@Test
+	public void generaFizzBuzzParaMultiploDe3y5() {
+		assertEquals("FizzBuzz", fb.generar(30));
+		assertEquals("FizzBuzz", fb.generar(60));
+	}
+
+	@Test
+	public void generaElNumeroSiNoEsMultiploDe3Ni5() {
+		assertEquals("7", fb.generar(7));
+		assertEquals("8", fb.generar(8));
+	}
+
+	@Test
+	public void imprimeUnaSecuenciaDeNumerosConReglasFizzBuzz() {
+		String esperado = "1\n" + "2\n" + "Fizz\n" + "4\n" + "Buzz\n"
+				+ "Fizz\n";
+		assertEquals(esperado, fb.imprimir(6));
+
 	}
 
 }
