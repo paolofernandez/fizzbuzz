@@ -1,4 +1,3 @@
-package fizzbuzz;
 public class Principal {
 
 	private static int limite;

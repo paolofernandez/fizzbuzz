@@ -1,5 +1,3 @@
-package fizzbuzz;
-
 public class FizzBuzz {
 
 	public String imprimirFizz(int num)
@@ -41,4 +39,5 @@ public class FizzBuzz {
 		serie+=imprimir(limite);
 		return serie;
 	}
+
 }
